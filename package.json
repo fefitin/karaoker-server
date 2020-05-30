@@ -1,0 +1,28 @@
+{
+  "name": "karaoker-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fefitin/karaoker-server.git"
+  },
+  "author": "Federico García",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fefitin/karaoker-server/issues"
+  },
+  "homepage": "https://github.com/fefitin/karaoker-server#readme",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "promisify": "0.0.3",
+    "socket-io": "^1.0.0",
+    "socket.io": "^2.3.0",
+    "url-join": "^4.0.1"
+  }
+}
