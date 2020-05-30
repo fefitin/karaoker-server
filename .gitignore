@@ -106,3 +106,5 @@ dist
 pretrained_models
 /downloads
 /tmp
+
+.DS_Store
