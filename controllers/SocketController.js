@@ -21,9 +21,9 @@ const SocketController = {
 
     KaraokerController
       .download(url)
-      .then(file => {
-        user.emit(Messages.DOWNLOAD_OK);
-        return file;
+      .then(data => {
+        user.emit(Messages.DOWNLOAD_OK, data.id);
+        return data.file;
       })
       .then(file => KaraokerController.process(file))
       .then(file => {

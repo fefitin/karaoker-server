@@ -41,7 +41,7 @@ const KaraokerController = {
         if(err) {
           reject(new Error('Error processing file'));
         } else {
-          resolve(file);
+          resolve({ id, file });
         }
       })      
     });
