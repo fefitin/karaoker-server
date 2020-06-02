@@ -17,8 +17,6 @@ const SocketController = {
   },
 
   download: (user, url) => {
-    debug('User %s downloading %s', user.id, url);
-
     KaraokerController
       .download(url)
       .then(data => {

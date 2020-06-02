@@ -5,6 +5,7 @@ const express = require('express');
 const app = express();
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
+const proxy = require('express-http-proxy');
 
 //Setup controllers
 const SocketController = require('./controllers/SocketController');
@@ -21,6 +22,9 @@ io.on("connection", function(socket) {
 
 //Serve static files
 app.use(`/${process.env.SERVE_DIR}`, express.static(process.env.SERVE_DIR));
+
+//Serve frontend for debugging purposes
+app.use('/', proxy('localhost:3000'));
 
 //Start server
 const port = process.env.PORT;
