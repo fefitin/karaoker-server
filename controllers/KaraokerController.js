@@ -17,11 +17,17 @@ const KaraokerController = {
   },
 
   parseURL: url => {
-    const matches = url.match(/\?v=([^&]+)/);
-    if(matches)
+    let matches = url.match(/\?v=([^&]+)/);
+    if(matches) {
       return matches[1];
-    else
+    }
+
+    matches = url.match(/youtu\.be\/(.+)/);
+    if(matches) {
+      return matches[1];
+    } else {
       return false;
+    }
   },
 
   download: url => {
