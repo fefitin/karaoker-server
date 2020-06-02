@@ -15,3 +15,6 @@ https://docs.conda.io/en/latest/miniconda.html#linux-installers
 
 ### Spleeter
     conda install -c conda-forge spleeter
+
+## Frontend
+https://github.com/fefitin/karaoker-client
