@@ -15,6 +15,9 @@ const KaraokerController = require('./controllers/KaraokerController');
 KaraokerController.tmp = process.env.TMP_DIR;
 KaraokerController.serve = process.env.SERVE_DIR;
 
+//Filter connections
+io.origins([ process.env.ALLOWED_ORIGIN ]);
+
 //Receive new connections
 io.on("connection", function(socket) {
   SocketController.handle(socket);
